@@ -75,30 +75,6 @@ This kind of analysis is useful for inference performance discussions because it
 
 That makes it a good conversation piece for systems, performance, and hardware-software co-design interviews.
 
-## How To Run
-
-Create or use a Python environment with:
-
-- `numpy`
-- `pandas`
-- `matplotlib`
-
-Then run:
-
-```bash
-cd /Users/pkarakala/Documents/Playground/transformer-inference-roofline
-python3 main.py
-```
-
-Outputs will be written to `outputs/`:
-
-- `op_metrics.csv`
-- `summary_metrics.csv`
-- `roofline_plot.png`
-- `latency_vs_sequence_length.png`
-- `arithmetic_intensity_vs_sequence_length.png`
-- `stacked_runtime_breakdown.png`
-
 ## Reading The Results
 
 - The roofline plot shows each modeled op against the hardware ceiling.
@@ -106,11 +82,3 @@ Outputs will be written to `outputs/`:
 - The arithmetic intensity plot shows whether longer sequences push the workload toward compute-bound or memory-bound regimes.
 - The stacked runtime plot shows which operations dominate total estimated runtime in prefill versus decode.
 
-## Suggested Demo Story
-
-If you are showing this in an interview, a good narrative is:
-
-1. Start with the hardware model: peak FLOPs and memory bandwidth define the roofline.
-2. Walk through a single op and explain FLOPs, bytes moved, and arithmetic intensity.
-3. Compare prefill and decode to highlight why decode often becomes more bandwidth-sensitive.
-4. Use the stacked breakdown to explain where optimization effort would likely matter most.
