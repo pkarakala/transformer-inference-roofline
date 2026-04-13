@@ -24,6 +24,24 @@ For each operation, it estimates:
 
 It also sweeps over sequence length, batch size, and hidden dimension, and compares prefill versus decode behavior.
 
+## Example Outputs
+
+### Roofline Plot
+
+![Roofline plot](assets/roofline_plot.png)
+
+### Latency vs Sequence Length
+
+![Latency vs sequence length](assets/latency_vs_sequence_length.png)
+
+### Arithmetic Intensity vs Sequence Length
+
+![Arithmetic intensity vs sequence length](assets/arithmetic_intensity_vs_sequence_length.png)
+
+### Stacked Op Runtime Breakdown
+
+![Stacked runtime breakdown](assets/stacked_runtime_breakdown.png)
+
 ## Files
 
 - `hardware.py`: toy hardware roofline model
@@ -32,6 +50,7 @@ It also sweeps over sequence length, batch size, and hidden dimension, and compa
 - `roofline.py`: roofline and achieved-performance helpers
 - `plots.py`: plotting utilities
 - `main.py`: entrypoint that runs the sweep and saves outputs
+- `assets/`: tracked images displayed in this README
 
 ## Analytical Assumptions
 
