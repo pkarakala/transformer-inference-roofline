@@ -92,6 +92,5 @@ This kind of analysis is useful for inference performance discussions because it
 - Why does decode often look more memory-sensitive than prefill?
 - How do longer contexts change the balance between attention and MLP work?
 
-That makes it a good conversation piece for systems, performance, and hardware-software co-design interviews.
 
 
