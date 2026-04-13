@@ -54,7 +54,7 @@ It also sweeps over sequence length, batch size, and hidden dimension, and compa
 
 ## Analytical Assumptions
 
-The implementation intentionally uses simple approximations that are easy to explain in an interview:
+The implementation intentionally uses simple approximations:
 
 1. Dense GEMMs are modeled with the standard `2 * M * N * K` FLOP estimate.
 2. Memory traffic is modeled as reads of inputs/weights plus writes of outputs.
@@ -94,10 +94,4 @@ This kind of analysis is useful for inference performance discussions because it
 
 That makes it a good conversation piece for systems, performance, and hardware-software co-design interviews.
 
-## Reading The Results
-
-- The roofline plot shows each modeled op against the hardware ceiling.
-- The latency plot shows how estimated end-to-end latency changes with context length.
-- The arithmetic intensity plot shows whether longer sequences push the workload toward compute-bound or memory-bound regimes.
-- The stacked runtime plot shows which operations dominate total estimated runtime in prefill versus decode.
 
