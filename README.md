@@ -1,6 +1,6 @@
 # transformer-inference-roofline
 
-`transformer-inference-roofline` is a toy Python project for reasoning about transformer inference performance using simple roofline-style analysis. The goal is not cycle accuracy; the goal is to give a clean, interview-friendly framework for discussing which inference operations are likely compute-bound or memory-bound as model and workload parameters change.
+`transformer-inference-roofline` is a toy Python project for reasoning about transformer inference performance using simple roofline-style analysis. The goal is not cycle accuracy; the goal is to give a framework for discussing which inference operations are likely compute-bound or memory-bound as model and workload parameters change.
 
 ## Project Goal
 
